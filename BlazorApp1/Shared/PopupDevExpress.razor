@@ -1,0 +1,23 @@
+﻿@inject IModalService ModalService
+
+<DxPopup HeaderText="Header" CloseButtonClick="Cancel">
+    <Content>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet metus vel nisi blandit tincidunt vel efficitur purus. 
+            Nunc nec turpis tempus, accumsan orci auctor, imperdiet mauris. Fusce id purus magna.</p>
+    </Content>
+    <FooterTemplate>
+        <button class="btn btn-primary" @onclick="Ok">OK</button>
+    </FooterTemplate>
+</DxPopup>
+
+@code {
+    void Cancel()
+    {
+        ModalService.Cancel();
+    }
+
+    void Ok() 
+    {
+        ModalService.Close();
+    }
+}

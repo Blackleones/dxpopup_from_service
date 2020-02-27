@@ -1,0 +1,8 @@
+﻿@page "/"
+
+@using DevExpress.Blazor
+@inject IModalService Modal
+<button @onclick="@(() => Modal.Show<PopupDevExpress>())">click devex</button>
+
+@code {
+}
