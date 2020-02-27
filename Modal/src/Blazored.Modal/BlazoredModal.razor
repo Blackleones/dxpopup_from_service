@@ -1,15 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Components.Web
 
-<div class="blazored-modal-container @ComponentPosition @(IsVisible ? "blazored-modal-active" : string.Empty)">
-    <div class="blazored-modal-wrapper">
-        <div>
-            <div class="blazored-modal-content">
-                <CascadingValue Value="this">
-                    <CascadingValue Value="@Parameters">
-                        @Content
-                    </CascadingValue>
-                </CascadingValue>
-            </div>
-        </div>
-    </div>
-</div>
+<CascadingValue Value="this">
+    <CascadingValue Value="@Parameters">
+        @Content
+    </CascadingValue>
+</CascadingValue>
